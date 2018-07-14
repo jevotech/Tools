@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>صانع ملفات نوت باد اونلاين</title>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+<style>
+
+@font-face{font-family:'rawy-thin';src: url('https://www.fontstatic.com/fonts/rawy-thin/rawy-thin.eot?#iefix');src: local('راوي خفيف'), local('rawy-thin'),url('https://www.fontstatic.com/fonts/rawy-thin/rawy-thin.woff') format('woff');}
+html {
+  font-size: 10px;
+  font-size: 1.0rem;
+}
+/*
+ * Droid Arabic Kufi (Arabic) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.eot);
+  src: url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.eot);
+  src: url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.ttf) format('truetype');
+}
+body {
+  font-size: 10px;
+  font-size: 1.0rem;
+  font-family: "Droid Arabic Kufi", "Helvetica Neue", helvetica, arial, sans-serif;
+  color: #392F5A;
+  background-color: #EEEDEB;
+}
+
+h1 {
+  font-size: 40px;
+  font-size: 4.0rem;
+  font-family: "rawy-thin", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 15px;
+}
+
+#download-link {
+  display: none;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="text-center">
+	<h1>حفظ باسم ملف</h1>
+	
+	<p id="stats-msg"></p>
+	
+
+
+
+ <span id="stats-size">0</span>KB 
+
+
+<span id="stats-time">0</span>
+ثانية
+
+	<div class="container">
+
+		<!-- FILE NAME -->
+		<div class="row justify-content-md-center">
+			<div class="col-md-6">
+				<div class="form-group input-group">
+					<input type="text" 
+								 id="file-name"
+								 class="form-control" 
+								 placeholder="اسم الملف" 
+								 aria-label="File Name" 
+								 aria-describedby="filename-addon"/>
+					<span id="filename-addon" 
+								class="input-group-addon">
+						.txt
+					</span>
+				</div><!--.input-group-->
+			</div><!--.col-->
+		</div><!--.row-->
+		
+		<!-- FILE CONTENT -->
+		<div class="row justify-content-md-center">
+			<div class="col-md-6">
+				<div class="form-group">
+					<textarea id="file-contents" 
+										class="form-control" 
+										placeholder="محتويات الملف."
+										rows="4"></textarea>
+				</div><!--.form-group-->
+			</div><!--.col-->
+		</div><!--.row-->
+	</div><!--.container-->
+
+	<button type="button" 
+					id="save-file-btn" 
+					class="btn btn-secondary"
+					data-state="ready">
+		إعداد التحميل الخاص بك
+	</button>
+	
+
+</div><!--.text-center-->
+
+
+
+
+
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+<script type='text/javascript' src='https://rawgit.com/jevotech/scripts/master/notepad.js'></script>
+</body>
+</html>
